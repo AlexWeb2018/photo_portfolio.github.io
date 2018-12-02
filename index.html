@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MetroFun</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+	<nav>
+		<ul>
+			<li>
+				<a href="#">Home</a>
+				<a href="#">Gallery</a>
+				<a href="#">Pages</a>
+				<a href="#">Contact</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<header>
+		<h1>Fedor Birucov</h1>
+	</header>
+
+	<section class="about">	
+			<div class="box box-1">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, molestiae omnis dolore debitis! Explicabo necessitatibus vitae expedita. Mollitia, praesentium reprehenderit, deserunt quaerat sed in nisi dolorum nulla. Quasi, architecto, excepturi.</p>
+			</div>
+
+			<div class="box box-2">
+				<div class="photo">
+					<img src="img/avatar.jpg">
+				</div>
+			</div>
+	</section>
+
+
+	
+	<div class="wrapper">
+		<div class="box item-1"><img src="img/metro/1-4-1.jpg"></div>
+		<div class="box item-2"><img src="img/metro/170821-IDN_6015.jpg"></div>
+		<div class="box item-3"><img src="img/metro/81-717-01b.jpg"></div>
+		<div class="box item-4"><img src="img/metro/840.jpg"></div>
+		<div class="box item-5"><img src="img/metro/847.jpg"></div>
+		<div class="box item-6"><img src="img/metro/LR2014.05-RUS.50-MetroVagon-17.jpg"></div>
+		<div class="box item-7"><img src="img/metro/partizanka.jpg"></div>
+		<div class="box item-8"><img src="img/metro/Vagon_metro_D-844.jpg"></div>
+	</div>
+
+	<section class="info">
+		<div class="boxis">
+			<img src="img/photo-camera.png">
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+		<div class="boxis">
+			<img src="img/photo-camera.png">
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+		<div class="boxis">
+			<img src="img/photo-camera.png">
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+		<div class="boxis">
+			<img src="img/photo-camera.png">
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+		<div class="boxis">
+			<img src="img/photo-camera.png">
+			<p>Lorem ipsum dolor sit amet.</p>
+		</div>
+	</section>
+
+	<div id="main">
+		<button class="left" onclick="slider.left();"><</button>
+			<div id="scr"></div>
+		<button class="right" onclick="slider.right();">></button>
+	</div>	
+
+
+	<footer>
+		<div class="container">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+	</footer>
+
+
+	<script>
+			var slider = {
+				slides:['img/piter/f1.jpg','img/piter/f2.jpg','img/piter/f3.jpg','img/piter/f4.jpg','img/piter/f5.jpg'],
+				frame:0, // текущий кадр для отбражения - индекс картинки из массива
+				set: function(image) { // установка нужного фона слайдеру
+					document.getElementById("scr").style.backgroundImage = "url("+image+")";
+				},
+				init: function() { // запуск слайдера с картинкой с нулевым индексом
+					this.set(this.slides[this.frame]);
+				},
+				left: function() { // крутим на один кадр влево
+					this.frame--;
+					if(this.frame < 0) this.frame = this.slides.length-1;
+					this.set(this.slides[this.frame]);
+				},
+				right: function() { // крутим на один кадр вправо
+					this.frame++;
+					if(this.frame == this.slides.length) this.frame = 0;
+					this.set(this.slides[this.frame]);		
+				}
+			};
+			window.onload = function() { // запуск слайдера после загрузки документа
+				slider.init();
+				
+			};
+</script>
+</body>
+</html>
