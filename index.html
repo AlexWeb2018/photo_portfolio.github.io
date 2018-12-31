@@ -8,9 +8,17 @@
 <body>
 
 	
+				<div class="right-bar" id="right-bar">
+					<a href="javascript:void(0)" id="close" onclick="closeNav()">&times;</a>
+					<a href="#">Home</a>
+					<a href="#about">About</a>
+					<a href="#know">My work</a>
+					<a href="#gallery">Gallery</a>
+					<a href="#contacts">Contacts</a>
+				</div>
 
+			<nav class="menu">
 
-			<nav>
 				<div class="logo">mr_metropolitain</div>
 				<ul>
 					<li><a href="#">Home</a></li>
@@ -18,7 +26,8 @@
 					<li><a href="#know">My work</a></li>
 					<li><a href="#gallery">Gallery</a></li>
 					<li><a href="#contacts">Contacts</a></li>
-					</ul>
+					<span id="open" class="open" onclick="openNav()">&#9776;</span>
+				</ul>
 			</nav>
 
 			<header>
@@ -93,6 +102,21 @@
 					$('nav').removeClass('black');
 				}
 			});
+		</script>
+
+
+		<script>
+			function openNav() {
+				document.getElementById("open").style.display = "none";
+				document.getElementById("right-bar").style.width = "100%";
+			}
+
+
+			function closeNav() {
+				document.getElementById("right-bar").style.width = "0";
+				document.getElementById("open").style.display = "block";
+			}
+
 		</script>
 
 		
