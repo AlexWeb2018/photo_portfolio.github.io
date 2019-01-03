@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="js/jquery.fancybox.min.css">
 </head>
 <body>
 
@@ -78,20 +79,22 @@
 
 
 		<div class="wrapper" id="gallery">
-			<div class="box"><img src="img/metro/r1.jpg"></div>
-			<div class="box"><img src="img/metro/r2.jpg"></div>
-			<div class="box"><img src="img/metro/r3.jpg"></div>
-			<div class="box"><img src="img/metro/r4.jpg"></div>
-			<div class="box"><img src="img/metro/r5.jpg"></div>
-			<div class="box"><img src="img/metro/r6.jpg"></div>
-			<div class="box"><img src="img/metro/r7.jpg"></div>
-			<div class="box"><img src="img/metro/r8.jpg"></div>
+			<a data-fancybox="gallery" href="img/metro/r1.jpg"><img src="img/metro/r1.jpg"></a>
+			<a data-fancybox="gallery" href="img/metro/r2.jpg"><img src="img/metro/r2.jpg"></a>
+			<a data-fancybox="gallery" href="img/metro/r3.jpg"><img src="img/metro/r3.jpg"></a>
+			<a data-fancybox="gallery" href="img/metro/r4.jpg"><img src="img/metro/r4.jpg"></a>
+			<a data-fancybox="gallery" href="img/metro/r5.jpg"><img src="img/metro/r5.jpg"></a>
+			<a data-fancybox="gallery" href="img/metro/r6.jpg"><img src="img/metro/r6.jpg"></a>
+			<a data-fancybox="gallery" href="img/metro/r7.jpg"><img src="img/metro/r7.jpg"></a>
+			<a data-fancybox="gallery" href="img/metro/r8.jpg"><img src="img/metro/r8.jpg"></a>
 		</div>
 
 		<footer id="contacts"></footer>
 
 
 <script src="js/jquerry.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/jquery.fancybox.min.js"></script>
 
 		<script type="text/javascript">
 			$(window).on("scroll", function() {
